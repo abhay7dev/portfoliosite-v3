@@ -1,0 +1,35 @@
+{
+  "name": "portfoliosite-v3",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The third iteration of my Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node .",
+    "start": "NODE_ENV=production node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpicGamer007/portfoliosite-v3.git"
+  },
+  "keywords": [
+    "personal-site",
+    "portfolio-site",
+    "epicgamer007"
+  ],
+  "author": "EpicGamer007",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/EpicGamer007/portfoliosite-v3/issues"
+  },
+  "homepage": "https://github.com/EpicGamer007/portfoliosite-v3#readme",
+  "private": "true",
+  "os": [
+    "linux"
+  ],
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
