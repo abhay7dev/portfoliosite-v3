@@ -13,7 +13,7 @@ app.set("layout extractStyles", true);
 app.set("layout extractMetas", true);
 app.use(layouts);
 
-app.set("json spaces", 4);
+if(config.NODE_ENV == "development") app.set("json spaces", 4);
 app.set("x-powered-by", false);
 
 app.get("/", (req, res) => {
