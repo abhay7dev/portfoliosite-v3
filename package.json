@@ -5,8 +5,8 @@
   "description": "The third iteration of my Personal Website",
   "main": "index.js",
   "scripts": {
-    "dev": "node .",
-    "start": "NODE_ENV=production node ."
+    "dev": "NODE_ENV=development node --require dotenv/config .",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,8 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
   }
 }

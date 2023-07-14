@@ -1,7 +1,7 @@
+import { PORT, NODE_ENV, SERVER_TIME_ZONE} from "./config.js";
+
 import express from "express";
 const app = express();
-
-import { PORT, NODE_ENV, SERVER_TIME_ZONE} from "./config.js";
 
 app.set("view engine", "ejs");
 app.set("layout extractScripts", true);
