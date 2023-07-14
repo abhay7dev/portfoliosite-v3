@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Valorant";
+    font-style: normal;
+    font-weight:normal;
+    font-display: swap;
+    src: url("/styles/fonts/valorant.woff2") format("woff2"), url("/styles/fonts/valorant.ttf") format("truetype");
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#cover {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background-color: #1E1E2E;
+}
+
+#cover > h1 {
+    place-self: center;
+    font-family: Valorant, Arial, Helvetica, sans-serif;
+    font-size: 15vw;
+    color: #C4CDEA;
+}
