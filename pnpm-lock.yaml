@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@xboxreplay/xboxlive-api':
+    specifier: ^3.4.3
+    version: 3.4.3
+  '@xboxreplay/xboxlive-auth':
+    specifier: ^4.0.0
+    version: 4.0.0
   ejs:
     specifier: ^3.1.9
     version: 3.1.9
@@ -16,6 +22,27 @@ dependencies:
     version: 2.5.1
 
 packages:
+
+  /@xboxreplay/errors@0.1.0:
+    resolution: {integrity: sha512-Tgz1d/OIPDWPeyOvuL5+aai5VCcqObhPnlI3skQuf80GVF3k1I0lPCnGC+8Cm5PV9aLBT5m8qPcJoIUQ2U4y9g==}
+    dev: false
+
+  /@xboxreplay/xboxlive-api@3.4.3:
+    resolution: {integrity: sha512-+iSmNCN4RHXZXBc48e0tJB+tvUs6XEwEWcXTcECrIttgDVN9fsFxroo+6ET+K38FobEM+5xUOfCVNqQoWQthxQ==}
+    dependencies:
+      '@xboxreplay/errors': 0.1.0
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@xboxreplay/xboxlive-auth@4.0.0:
+    resolution: {integrity: sha512-O7OO50uPeFlSv8A3LHeS/dPnhEYhJGQblkSHxJE4/P0KttAiryXKtdc1FFUYPPFddy3+uoBcN8mkpfyuiUOteA==}
+    dependencies:
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -38,6 +65,14 @@ packages:
 
   /async@3.2.4:
     resolution: {integrity: sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==}
+    dev: false
+
+  /axios@0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
+    dependencies:
+      follow-redirects: 1.15.2
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /balanced-match@1.0.2:
@@ -242,6 +277,16 @@ packages:
       unpipe: 1.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /follow-redirects@1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /forwarded@0.2.0:

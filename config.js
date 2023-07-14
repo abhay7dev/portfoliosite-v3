@@ -10,3 +10,8 @@ export const Valorant = {
     VALORANT_TAG: process.env.VALORANT_TAG || "00000",
     VALORANT_API_KEY: process.env.VALORANT_API_KEY || ""
 }
+
+export const XboxLive = {
+    EMAIL: process.env.XBOX_LIVE_EMAIL,
+    PASSWORD: process.env.XBOX_LIVE_PASSWORD
+}
