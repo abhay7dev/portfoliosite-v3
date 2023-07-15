@@ -5,7 +5,13 @@
 	</head>
 	<body>
 		
-		<main id="cover">
+		<header id="cover">
+			<h1 class="pagetitle"><%- pagetitle %></h1>
+			<%- defineContent("subhead") %>
+			<%- include("./components/nav") %>
+		</header>
+		
+		<main>
 			<%- body %>
 		</main>
 		
