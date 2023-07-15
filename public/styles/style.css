@@ -108,3 +108,7 @@ nav.links {
     --t: 0.3s;
     color: #585b70;
 }
+
+.pronounciation-audio {
+    display: hidden;
+}
