@@ -4,11 +4,15 @@
 		<%- include("./components/head") %>
 	</head>
 	<body>
+		<%- include("./components/top-nav") %>
 		
 		<header id="cover">
 			<h1 class="pagetitle"><%- pagetitle %></h1>
 			<%- defineContent("subhead") %>
-			<%- include("./components/nav") %>
+			<noscript>
+				<h6>Damn. Why you gotta disable JS my guy? Some parts of this site ain't gonna work now :(</h6>
+			</noscript>
+			<%- include("./components/bottom-nav") %>
 		</header>
 		
 		<main>
