@@ -143,7 +143,12 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
         font-size: 2vh;
     }
 }
-@media screen and ( max-height: 750px ) and ( min-width: 1250px ) {
+@media screen and ( max-width: 500px ) {
+    .menu > ul li a {
+        font-size: 2vh;
+    }
+}
+@media screen and ( max-height: 300px ) and ( min-width: 1000px ) {
     .menu > ul li {
         display: inline-block;
     }
