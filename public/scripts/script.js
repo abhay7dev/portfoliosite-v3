@@ -25,7 +25,6 @@ const toggleMenu = () => {
 		link.tabIndex = link.tabIndex == "-1" ? "0" : "-1";
 	});
 }
-
 Array.from(document.querySelectorAll(".hamburger")).forEach((ham) => {
 	ham.addEventListener("click", toggleMenu);
 	ham.addEventListener("keydown", (e) => {
@@ -40,5 +39,15 @@ Array.from(document.querySelectorAll(".hamburger")).forEach((ham) => {
 			e.preventDefault();
 			toggleMenu();
 		}
+	});
+});
+Array.from(document.querySelectorAll(".menu > ul > li > a")).forEach((link) => {
+	link.addEventListener("click", (e) => {
+		document.querySelector(".menu").classList.toggle("active");
+	});
+});
+Array.from(document.querySelectorAll(".bot-nav > a")).forEach((link) => {
+	link.addEventListener("click", (e) => {
+		if(document.querySelector(".menu").classList.contains("active")) document.querySelector(".menu").classList.toggle("active");
 	});
 });
