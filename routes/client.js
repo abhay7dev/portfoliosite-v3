@@ -8,4 +8,8 @@ router.get("/", (req, res) => {
     res.render("index");
 });
 
+router.get("/minecraft", (req, res) => {
+    res.render("minecraft");
+});
+
 export default router;

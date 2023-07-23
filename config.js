@@ -11,7 +11,11 @@ export const Valorant = {
     VALORANT_API_KEY: process.env.VALORANT_API_KEY || ""
 }
 
+// Xbox Stuff
 export const XboxLive = {
     EMAIL: process.env.XBOX_LIVE_EMAIL,
     PASSWORD: process.env.XBOX_LIVE_PASSWORD
 }
+
+// Minecraft Stuff
+export const MINECRAFT_JAVA_USERNAME = process.env.MINECRAFT_JAVA_USERNAME || "MisterChief007";
