@@ -1,0 +1,47 @@
+:root {
+   --tooltip-color: #C4CDEA;
+}
+
+/* Tooltip Button */
+.pronounciation {
+    cursor: pointer;
+    vertical-align: top;
+    font-size: 2vw;
+    left: 2%;
+}
+.pronounciation-audio {
+    display: hidden;
+}
+/* https://stackoverflow.com/questions/7117073/add-a-tooltip-to-a-div */
+*[data-tooltip] {
+    position: relative;
+    color: var(--tooltip-color);
+}
+*[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -4rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+    border: var(--tooltip-color) solid 1px;
+    display: block;
+    font-size: calc(10px + 1vw);
+    padding: 15% 50%;
+}
+*[data-tooltip]:hover::after {
+    opacity: 1;
+}
+/* My Avatar */
+.avatar {
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: 3px 8px 50px 13px rgba(196,205,234,0.3);
+    width: 20vh;
+    bottom: 16vh;
+}
+@media screen and ( max-height: 650px ) {
+    .avatar {
+        display: none;
+    }
+}
