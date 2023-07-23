@@ -22,6 +22,8 @@
     --bg-color-darker: rgba(24,24,37,1);
     --bg-color-darkest: rgba(17,17,27,1);
     --primary-color: #b4befe;
+    --bot-nav-color: #C4CDEA;
+    --bot-nav-filter: invert(87%) sepia(4%) saturate(1592%) hue-rotate(191deg) brightness(95%) contrast(93%);
 }
 
 
@@ -126,6 +128,15 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     left: 0;
     overflow: auto;
 }
+.menu .uptime-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: filter 1s;
+}
+.menu .uptime-icon:hover {
+    filter: brightness(0) invert(74%) sepia(4%) saturate(1019%) hue-rotate(319deg) brightness(126%) contrast(92%);
+}
 /* Responsiveness */
 @media screen and ( max-height: 750px ) {
     .menu > ul li a {
@@ -150,7 +161,7 @@ nav.bot-nav {
     display: flex;
     justify-content: space-between;
     height: 7rem;
-    z-index: 200;
+    z-index: 2;
 }
 nav.bot-nav img {
     width: 4vw;
@@ -167,6 +178,7 @@ nav.bot-nav img {
         var(--c)  calc( 201% - var(--p, 0%)) 0;
     background-size: 50.1% var(--p, .08em);
     transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
+    /* filter: var(--bot-nav-filter); */
 }
 nav.bot-nav img:hover {
     transform: scale(1.3);
