@@ -40,6 +40,68 @@ html {
 }
 
 
+/* Page Loading */
+.loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color-darker);
+    z-index: 5;
+    position: fixed;
+    transition: opacity 1s;
+    transition-timing-function: cubic-bezier( 0.25, 0.54, 0, 0.92 );
+}
+.wave {
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(45deg, var(--primary-color), var(--bot-nav-color));
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+}
+.wave:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+    animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+    animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+
 /* Front Cover Page */
 #cover {
     width: 100vw;
@@ -62,6 +124,7 @@ html {
         font-size: 10vw;
     }
 }
+
 
 /* Top Nav
 https://codepen.io/hitensharma/pen/dybryGE
@@ -200,10 +263,4 @@ nav.bot-nav img:hover {
     background-color: var(--bg-color-darkest);
     width: 100%;
     height: 100%;
-}
-
-/* No JavaScript */
-noscript {
-    margin-top: 5%;
-    color: var(--primary-color);
 }

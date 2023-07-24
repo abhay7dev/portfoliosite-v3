@@ -1,5 +1,12 @@
-// import Swup from 'https://unpkg.com/swup@3?module';
-// const swup = new Swup();
+// Loading
+const loader = document.querySelector(".loader");
+loader.addEventListener("transitionend", (e) => {
+	loader.style.display = "none";
+});
+window.addEventListener("load", (event) => {
+	loader.style.opacity = "0";
+});
+
 
 // Toggle Top Nav
 const toggleMenu = () => {
@@ -28,14 +35,14 @@ Array.from(document.querySelectorAll(".hamburger")).forEach((ham) => {
 Array.from(document.querySelectorAll(".menu > ul > li > a")).forEach((link) => {
 	link.addEventListener("click", (e) => {
 		document.querySelector(".menu").classList.toggle("active");
+		loader.style.opacity = "1";
 	});
 });
 Array.from(document.querySelectorAll(".bot-nav > a")).forEach((link) => {
 	link.addEventListener("click", (e) => {
-		if(document.querySelector(".menu").classList.contains("active")) document.querySelector(".menu").classList.toggle("active");
+		if(document.querySelector(".menu").classList.contains("active")) {
+			document.querySelector(".menu").classList.toggle("active");
+			loader.style.opacity = "1";
+		}
 	});
-});
-
-window.addEventListener("load", (event) => {
-	console.log("page is fully loaded");
 });
