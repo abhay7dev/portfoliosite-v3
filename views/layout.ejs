@@ -25,6 +25,7 @@
 				<h1 class="pagetitle"><%- pagetitle %></h1>
 				<%- defineContent("subhead") %>
 				<noscript>
+					<link rel="stylesheet" href="/styles/noscript.css">
 					<h6>Damn. Why you gotta disable JS my guy? Some parts of this site ain't gonna work now :(</h6>
 				</noscript>
 			</header>
@@ -35,6 +36,13 @@
 		</main>
 
 		<%- include("./components/bottom-nav") %>
+		<footer class="bot-nav">
+			<a target="_blank" href="https://replit.com/@EpicGamer007">Replit</a>
+			<a href="/valorant">Valorant</a>
+			<a href="/minecraft">Minecraft</a>
+			<a href="/xbox">Xbox</a>
+			<a target="_blank" href="https://github.com/EpicGamer007">GitHub</a>
+		</footer>
 		
 	</body>
 </html>

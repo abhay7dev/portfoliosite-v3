@@ -223,7 +223,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 
 
 /* Bottom Nav */
-nav.bot-nav {
+.bot-nav {
     position: fixed;
     bottom: 1vh;
     width: 100vw;
@@ -232,9 +232,9 @@ nav.bot-nav {
     height: 7rem;
     z-index: 2;
 }
-nav.bot-nav img {
-    padding-left: 1rem;
-    padding-right: 1rem;
+.bot-nav img {
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
     width: 4vw;
     height: 4vw;
     min-width: 4rem;
@@ -251,10 +251,21 @@ nav.bot-nav img {
     transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
     /* filter: var(--bot-nav-filter); */
 }
-nav.bot-nav img:hover {
+.bot-nav img:hover {
     transform: scale(1.3);
     --p: 101%;
     --t: 0.3s;
+}
+footer.bot-nav {
+    display: none;
+}
+@media screen and ( max-width: 380px ) {
+    nav.bot-nav {
+        visibility: hidden;
+    }
+    footer.bot-nav {
+        display: block;
+    }
 }
 
 

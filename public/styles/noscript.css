@@ -2,3 +2,7 @@ noscript {
     margin-top: 5%;
     color: var(--primary-color);
 }
+
+.loader {
+    opacity: 0;
+}
