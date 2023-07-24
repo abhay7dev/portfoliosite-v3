@@ -1,4 +1,4 @@
-import { SkinViewer, WalkingAnimation } from "./skinview3d.bundle.js";
+import { SkinViewer, WalkingAnimation } from "./lib/skinview3d.bundle.js";
 try {
     const skin = (await (await fetch("/api/minecraft")).json()).skin;
     const canvas = document.querySelector(".skin-container");
