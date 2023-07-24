@@ -35,3 +35,7 @@ Array.from(document.querySelectorAll(".bot-nav > a")).forEach((link) => {
 		if(document.querySelector(".menu").classList.contains("active")) document.querySelector(".menu").classList.toggle("active");
 	});
 });
+
+window.addEventListener("load", (event) => {
+	console.log("page is fully loaded");
+});
