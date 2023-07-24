@@ -1,8 +1,11 @@
+// import Swup from 'https://unpkg.com/swup@3?module';
+// const swup = new Swup();
+
 // Toggle Top Nav
 const toggleMenu = () => {
 	document.querySelector(".menu").classList.toggle("active");
 	document.querySelector(".hamburger").setAttribute("aria-pressed", document.querySelector(".hamburger").getAttribute("aria-pressed") == "false" ? "true" : "false");
-	Array.from(document.querySelectorAll(".menu > ul > li > a")).forEach((link) => {
+	Array.from(document.querySelectorAll(".menu a")).forEach((link) => {
 		link.tabIndex = link.tabIndex == "-1" ? "0" : "-1";
 	});
 }

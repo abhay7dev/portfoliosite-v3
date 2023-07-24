@@ -163,13 +163,15 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 nav.bot-nav {
     position: fixed;
     bottom: 1vh;
-    width: 97vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     height: 7rem;
     z-index: 2;
 }
 nav.bot-nav img {
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 4vw;
     height: 4vw;
     min-width: 4rem;
@@ -194,7 +196,7 @@ nav.bot-nav img:hover {
 
 
 /* Main */
-main {
+.content {
     background-color: var(--bg-color-darkest);
     width: 100%;
     height: 100%;

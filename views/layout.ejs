@@ -6,18 +6,21 @@
 	<body>
 		<%- include("./components/top-nav") %>
 		
-		<header id="cover">
-			<h1 class="pagetitle"><%- pagetitle %></h1>
-			<%- defineContent("subhead") %>
-			<noscript>
-				<h6>Damn. Why you gotta disable JS my guy? Some parts of this site ain't gonna work now :(</h6>
-			</noscript>
-			<%- include("./components/bottom-nav") %>
-		</header>
-		
 		<main id="main">
-			<%- body %>
+			<header id="cover">
+				<h1 class="pagetitle"><%- pagetitle %></h1>
+				<%- defineContent("subhead") %>
+				<noscript>
+					<h6>Damn. Why you gotta disable JS my guy? Some parts of this site ain't gonna work now :(</h6>
+				</noscript>
+			</header>
+
+			<article class="content">
+				<%- body %>
+			</article>
 		</main>
+
+		<%- include("./components/bottom-nav") %>
 		
 	</body>
 </html>
