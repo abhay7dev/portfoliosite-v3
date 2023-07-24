@@ -15,6 +15,9 @@ const toggleMenu = () => {
 	Array.from(document.querySelectorAll(".menu a")).forEach((link) => {
 		link.tabIndex = link.tabIndex == "-1" ? "0" : "-1";
 	});
+	Array.from(document.querySelectorAll(".pronounciation")).forEach((p) => {
+		p.tabIndex = p.tabIndex == "-1" ? "0" : "-1";
+	});
 }
 Array.from(document.querySelectorAll(".hamburger")).forEach((ham) => {
 	ham.addEventListener("click", toggleMenu);
