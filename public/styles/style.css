@@ -59,7 +59,7 @@ html {
 }
 @media ( orientation: portrait ) {
     #cover > .pagetitle {
-        font-size: 10vh;
+        font-size: 10vw;
     }
 }
 
@@ -110,6 +110,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     text-align: center;
     list-style: none;
     white-space: nowrap;
+    margin-top: -5%;
 }
 .menu > ul li a {
     margin: 1.5rem;
@@ -118,7 +119,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     font-size: 5vh;
     text-decoration: none;
     text-transform: uppercase;
-    color: #b4befe;
+    color: var(--primary-color);
     transition: color 0.2s;
 }
 .menu > ul li a:hover{
@@ -191,6 +192,13 @@ nav.bot-nav img:hover {
     --t: 0.3s;
 }
 
+
+/* Main */
+main {
+    background-color: var(--bg-color-darkest);
+    width: 100%;
+    height: 100%;
+}
 
 /* No JavaScript */
 noscript {
