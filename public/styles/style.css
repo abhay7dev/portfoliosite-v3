@@ -226,7 +226,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 .bot-nav {
     position: fixed;
     bottom: 1vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 7rem;
