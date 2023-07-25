@@ -39,6 +39,27 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Scroll Bars */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-color-darker);
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: var(--bg-color-darker);
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    transition: background-color 0.5s;
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bot-nav-color);
+}
+
 
 /* Page Loading */
 .loader {
@@ -88,7 +109,6 @@ html {
 .wave:nth-child(10) {
     animation-delay: 0.9s;
 }
-
 @keyframes wave {
     0% {
         transform: scale(0);
@@ -112,7 +132,8 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative
+    position: relative;
+    background-attachment: fixed;
 }
 #cover > .pagetitle {
     font-family: Valorant, Arial, Helvetica, sans-serif;
@@ -225,12 +246,15 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 /* Bottom Nav */
 .bot-nav {
     position: fixed;
-    bottom: 1vh;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 7rem;
     z-index: 2;
+
+    height: 7rem;
+    width: 98%;
+    bottom: 1vh;
+    left: 50%;
+    transform: translate(-50%, -0%);
 }
 .bot-nav img {
     /* padding-left: 1rem;
@@ -272,6 +296,6 @@ footer.bot-nav {
 /* Main */
 .content {
     background-color: var(--bg-color-darkest);
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
