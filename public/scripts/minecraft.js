@@ -16,6 +16,7 @@ try {
         width: canvas.width,
         height: canvas.height,
         skin: skin, 
+        model: "default",
     });
 
     skinViewer.animation = new WalkingAnimation();

@@ -139,13 +139,31 @@ html::-webkit-scrollbar-thumb:hover {
     font-family: Valorant, Arial, Helvetica, sans-serif;
     font-size: 15vw;
     color: var(--primary-color);
+    animation: 3s anim-lineUp ease-out;
 }
 @media ( orientation: portrait ) {
     #cover > .pagetitle {
         font-size: 10vw;
     }
 }
-
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
 
 /* Top Nav
 https://codepen.io/hitensharma/pen/dybryGE
