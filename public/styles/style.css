@@ -140,6 +140,9 @@ html::-webkit-scrollbar-thumb:hover {
     font-size: 15vw;
     color: var(--primary-color);
     animation: 3s anim-lineUp ease-out;
+    background-attachment: fixed;
+    z-index: 0;
+    position: fixed;
 }
 @media ( orientation: portrait ) {
     #cover > .pagetitle {
@@ -181,7 +184,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     position: fixed;
     top: 2rem;
     left: 2rem;
-    z-index: 2
+    z-index: 3;
 }
 .top-nav > .hamburger:hover {
     cursor: pointer;
@@ -199,7 +202,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     width: 100%;
     height: 100%;
     background: rgba(17,17,27,0.95); /* --bg-color-darkest */
-    z-index: 1;
+    z-index: 2;
     transition: 0.5s;
 }
 .menu > ul {
@@ -266,7 +269,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     position: fixed;
     display: flex;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 3;
 
     height: 7rem;
     width: 98%;
@@ -316,4 +319,6 @@ footer.bot-nav {
     background-color: var(--bg-color-darkest);
     width: 100vw;
     height: 100%;
+    z-index: 2;
+    position: relative;
 }
