@@ -4,12 +4,15 @@ const router = ExpressRouter();
 import layouts from "express-ejs-layouts";
 router.use(layouts);
 
-router.get("/", (req, res) => {
-    res.render("index");
-});
+import minecraft from "../controllers/minecraft.js";
+import valorant from "../controllers/valorant.js";
 
-router.get("/minecraft", (req, res) => {
-    res.render("minecraft");
-});
+import ejsData from "../middleware/data.js";
+router.use(ejsData);
+
+router.get("/", (_, res) => res.render("index"));
+
+router.get("/minecraft", minecraft);
+router.get("/valorant", valorant);
 
 export default router;

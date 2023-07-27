@@ -5,5 +5,7 @@ const Skin = new MinecraftSkin(MINECRAFT_JAVA_USERNAME);
 await Skin.init();
 
 export default (req, res) => {
-    return res.json({ "skin": Skin.url });
+    res.data.skin = Skin.url;
+    res.data.username = Skin.username;
+    return res.render("minecraft");
 }

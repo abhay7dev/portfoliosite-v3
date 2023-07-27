@@ -1,6 +1,6 @@
 export default class MinecraftSkin {
-    constructor(name, uuid = "") {
-        this.name = name;
+    constructor(username, uuid = "") {
+        this.username = username;
         this.uuid = uuid;
     }
 
@@ -16,7 +16,7 @@ export default class MinecraftSkin {
     }
 
     async #fetchuuid() {
-        let uuidData = await fetch(`https://api.mojang.com/users/profiles/minecraft/${this.name}`);
+        let uuidData = await fetch(`https://api.mojang.com/users/profiles/minecraft/${this.username}`);
         if(uuidData.status != 200) throw new Error("Failed to Initialize Minecraft Skin Object: " + data.errors.message);
         this.uuid = (await uuidData.json()).id;
     }

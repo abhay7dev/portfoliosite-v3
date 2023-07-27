@@ -7,8 +7,8 @@ export const SERVER_TIME_ZONE = Intl.DateTimeFormat().resolvedOptions().timeZone
 // Valorant Stuff
 export const Valorant = {
     NAME: process.env.VALORANT_NAME || "MisterChief7",
-    VALORANT_TAG: process.env.VALORANT_TAG || "00000",
-    VALORANT_API_KEY: process.env.VALORANT_API_KEY || ""
+    TAG: process.env.VALORANT_TAG || "00000",
+    API_KEY: process.env.VALORANT_API_KEY || ""
 }
 
 // Xbox Stuff

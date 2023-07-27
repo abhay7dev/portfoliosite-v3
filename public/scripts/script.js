@@ -1,12 +1,15 @@
 // Loading
 const loader = document.querySelector(".loader");
-loader.addEventListener("transitionend", (e) => {
+loader.addEventListener("transitionend", () => {
 	loader.style.display = "none";
 });
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
 	loader.style.opacity = "0";
 });
-
+window.addEventListener("beforeunload", () => {
+	loader.style.opacity = "1";
+	loader.style.display = "flex";
+});
 
 // Toggle Top Nav
 const toggleMenu = () => {

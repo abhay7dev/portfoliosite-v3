@@ -1,8 +1,8 @@
 import { SkinViewer, WalkingAnimation } from "./lib/skinview3d.bundle.js";
 try {
-    const skin = (await (await fetch("/api/minecraft")).json()).skin;
     const canvas = document.querySelector(".skin-container");
-    
+    const skin = canvas.dataset.skin;
+
     if(window.innerWidth < window.innerHeight) {
         canvas.width = window.innerWidth * 0.7;
         canvas.height = window.innerHeight * 0.6;
@@ -20,11 +20,11 @@ try {
     });
 
     skinViewer.animation = new WalkingAnimation();
-    skinViewer.nameTag = "MisterChief007"
+    skinViewer.nameTag = canvas.dataset.username;
     skinViewer.zoom = 0.5;
 
     skinViewer.cameraLight.intensity = 0.0;
-skinViewer.globalLight.intensity = 1.0;
+    skinViewer.globalLight.intensity = 1.0;
 
     if(window.innerWidth < window.innerHeight) {
         skinViewer.zoom = 0.3;
