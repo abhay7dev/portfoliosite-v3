@@ -6,9 +6,7 @@ const player = await new ValorantPlayer(Valorant.NAME, Valorant.TAG, Valorant.AP
 export default async (req, res) => {
     
     res.data.player = {
-        riotid: `${player.name}#${player.tag}`,
         name: player.name,
-        tag: player.tag,
         card: player.card,
         level: player.level,
     };
