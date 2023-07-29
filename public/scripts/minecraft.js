@@ -1,6 +1,7 @@
 import { SkinViewer, WalkingAnimation } from "./lib/skinview3d.bundle.js";
 try {
     const canvas = document.querySelector(".skin-container");
+    
     const skin = canvas.dataset.skin;
 
     if(window.innerWidth < window.innerHeight) {
