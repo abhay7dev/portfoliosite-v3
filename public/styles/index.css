@@ -39,6 +39,7 @@
     box-shadow: 3px 8px 50px 13px rgba(196,205,234,0.3);
     width: 20vh;
     bottom: 16vh;
+    position: absolute;
 }
 @media screen and ( max-height: 650px ) {
     .avatar {
