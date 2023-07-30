@@ -11,6 +11,7 @@ import ejsData from "../middleware/data.js";
 router.use(ejsData);
 
 router.get("/", (_, res) => res.render("index"));
+router.get("/about", (_, res) => res.render("about"));
 
 router.get("/minecraft", minecraft);
 router.get("/valorant", valorant);

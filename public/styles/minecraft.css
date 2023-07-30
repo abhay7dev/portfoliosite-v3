@@ -1,13 +1,9 @@
 .content {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .skin-header {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     margin-bottom: 1rem;
 }
 

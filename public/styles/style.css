@@ -10,7 +10,7 @@
 @font-face {
     font-family: "Minecraft";
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
     font-display: swap;
     src: url("/styles/fonts/minecraft.woff2") format("woff2"), url("/styles/fonts/minecraft.ttf") format("truetype");;
 }
@@ -184,7 +184,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     position: fixed;
     top: 2rem;
     left: 2rem;
-    z-index: 3;
+    z-index: 4;
 }
 .top-nav > .hamburger:hover {
     cursor: pointer;
@@ -202,7 +202,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     width: 100%;
     height: 100%;
     background: rgba(17,17,27,0.95); /* --bg-color-darkest */
-    z-index: 2;
+    z-index: 3;
     transition: 0.5s;
 }
 .menu > ul {
@@ -304,12 +304,22 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 footer.bot-nav {
     display: none;
 }
+@media screen and ( min-width: 1280px ) {
+    nav.bot-nav {
+        transition: opacity 0.5s;
+        opacity: 0.2;
+    }
+    nav.bot-nav:hover {
+        opacity: 1;
+    }
+}
 @media screen and ( max-width: 380px ) {
     nav.bot-nav {
         visibility: hidden;
     }
     footer.bot-nav {
         display: block;
+        bottom: 0rem;
     }
 }
 
@@ -321,4 +331,11 @@ footer.bot-nav {
     height: 100%;
     z-index: 2;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: var(--primary-color)
 }
