@@ -12,6 +12,7 @@ router.use(ejsData);
 
 router.get("/", (_, res) => res.render("index"));
 router.get("/about", (_, res) => res.render("about"));
+router.get("/skills", (_, res) => res.render("skills"));
 
 router.get("/minecraft", minecraft);
 router.get("/valorant", valorant);
