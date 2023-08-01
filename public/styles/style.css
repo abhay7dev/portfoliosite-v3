@@ -22,6 +22,7 @@
     --bg-color-darker: rgba(24,24,37,1);
     --bg-color-darkest: rgba(17,17,27,1);
     --primary-color: #b4befe;
+    --rosewater: #f5e0dc;
     --bot-nav-color: #C4CDEA;
     --bot-nav-filter: invert(87%) sepia(4%) saturate(1592%) hue-rotate(191deg) brightness(95%) contrast(93%);
 }
@@ -189,7 +190,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
 .top-nav > .hamburger:hover {
     cursor: pointer;
 }
-.top-nav > .hamburger:hover > div{
+.top-nav > .hamburger:hover > div {
     background-color: #f5e0dc;
 }
 /* FullScreen Menu */
@@ -227,7 +228,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     color: var(--primary-color);
     transition: color 0.2s;
 }
-.menu > ul li a:hover{
+.menu > ul li a:hover, .menu > ul li a:focus{
     color: #f5e0dc;
 }
 .menu.active {
@@ -240,7 +241,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     right: 2rem;
     transition: filter 1s;
 }
-.menu .uptime-icon:hover {
+.menu .uptime-icon:hover, .menu .uptime-icon:focus {
     filter: brightness(0) invert(74%) sepia(4%) saturate(1019%) hue-rotate(319deg) brightness(126%) contrast(92%);
 }
 /* Responsiveness */
@@ -296,7 +297,7 @@ https://codepen.io/Eslam_Refa3y/pen/PoYRzZq */
     transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
     /* filter: var(--bot-nav-filter); */
 }
-.bot-nav img:hover {
+.bot-nav img:hover, .bot-nav a:focus > img {
     transform: scale(1.3);
     --p: 101%;
     --t: 0.3s;

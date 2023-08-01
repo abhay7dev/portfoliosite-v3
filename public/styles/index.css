@@ -46,3 +46,8 @@
         display: none;
     }
 }
+
+/* Bot Nav override */
+nav.bot-nav {
+    opacity: 1;
+}
