@@ -53,6 +53,6 @@ Array.from(document.querySelectorAll(".bot-nav > a")).forEach((link) => {
 	});
 });
 
-if(window.innerHeight < document.body.scrollHeight) {
+if(window.innerHeight < document.body.scrollHeight && navigator.maxTouchPoints <= 0) {
 	document.querySelector(".scroll-down").style.display = "block";
 }
