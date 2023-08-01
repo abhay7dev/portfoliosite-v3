@@ -1,4 +1,4 @@
-.content {
+#content {
     height: 100%;
     min-height: 100vh;
 
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 950px) {
-    .content:last-child {
+    #content:last-child {
         padding-bottom: 7rem;
     }
 }

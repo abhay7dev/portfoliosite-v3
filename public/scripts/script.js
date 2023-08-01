@@ -52,3 +52,7 @@ Array.from(document.querySelectorAll(".bot-nav > a")).forEach((link) => {
 		}
 	});
 });
+
+if(window.innerHeight < document.body.scrollHeight) {
+	document.querySelector(".scroll-down").style.display = "block";
+}
