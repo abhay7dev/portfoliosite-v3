@@ -3,7 +3,7 @@ const loader = document.querySelector(".loader");
 loader.addEventListener("transitionend", () => {
 	loader.style.display = "none";
 });
-window.addEventListener("load", () => {
+window.addEventListener("pageshow", () => {
 	loader.style.opacity = "0";
 });
 window.addEventListener("beforeunload", () => {
