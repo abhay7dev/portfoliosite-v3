@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/styles/grids.css">
+<link rel="stylesheet" href="/styles/projects.css">
+
+<% data.projects.forEach((proj) => { %>
+    <section class="card" tabindex="0" aria-label="Project Card">
+        <img src="/images/github.svg" alt="Github Icon"/>
+        <div class="card-content">
+            <p class="card-title"><a tabindex="1" target="_blank" href="<%- proj.url %>"><%= proj.name %></a></p>
+            <p class="card-description"><%= proj.desc %><p>
+            <p class="stats"><span class="stars"><%= proj.stars %> star<% if(proj.stars != 1) { %>s<% } %></span><span class="lang"><%= proj.lang %></span></p>
+          </div>
+      </section>
+<% }); %>
+
+<%- contentFor("title") %>
+Abhay's Projects
+
+<%- contentFor("pagetitle") %>
+Projects
