@@ -1,0 +1,48 @@
+.pagetitle {
+    font-size: 10rem !important;
+    top: 5rem;
+}
+
+@media screen and ( max-width: 1500px ) {
+    .pagetitle {
+        font-size: 13vw !important;
+    }
+}
+
+.contact-links {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+
+@media screen and ( max-width: 1200px ) {
+    .contact-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.contact-links > li {
+    color: var(--rosewater);
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--rosewater);
+
+    background:linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)), linear-gradient(to right,rgba(255, 0, 0, 1),rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+
+    transition: all 400ms;
+
+}
+
+.contact-links a:hover {
+    background-size: 0 3px, 100% 3px;
+    color: var(--cat-green);
+}

@@ -17,6 +17,7 @@ router.get("/", (_, res) => res.render("index"));
 router.get("/about", (_, res) => res.render("about"));
 router.get("/skills", (_, res) => res.render("skills"));
 router.get("/projects", await projects);
+router.get("/contact", (_, res) => res.render("contact"));
 
 router.get("/minecraft", minecraft);
 router.get("/valorant", await valorant);
