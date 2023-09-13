@@ -51,3 +51,7 @@ export const mapData = async (mapName) => {
         splash: map.splash,
     }
 }
+
+export const titleData = async (titleUUID) => {
+    return (await (await fetch(`https://valorant-api.com/v1/playertitles/${titleUUID}`)).json()).data.titleText;
+}

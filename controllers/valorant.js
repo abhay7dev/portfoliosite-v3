@@ -1,5 +1,5 @@
 import { Valorant } from "../config.js";
-import ValorantPlayer, { mapData } from "../services/valorant-player.js";
+import ValorantPlayer, { mapData, titleData } from "../services/valorant-player.js";
 
 const player = await new ValorantPlayer(Valorant.NAME, Valorant.TAG, Valorant.API_KEY).init();
 
@@ -9,6 +9,7 @@ export default async (req, res) => {
         name: player.name,
         card: player.card,
         level: player.level,
+        title: undefined,
     };
 
     const rankDetails = (await player.rankDetails()).data;
@@ -27,6 +28,7 @@ export default async (req, res) => {
 
     const latestRankedGame = ((await player.latestRankedGame()).data)[0];
     const map = await mapData(latestRankedGame.metadata.map);
+    res.data.player.title = await titleData(latestRankedGame.players.all_players.filter(p => p.puuid == player.puuid)[0].player_title);
     res.data.latestGame = {
         map,
         players: {
