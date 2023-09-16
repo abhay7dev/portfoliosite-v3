@@ -1,13 +1,16 @@
 <link rel="stylesheet" href="/styles/valorant.css">
 
 <aside id="MainPlayer">
+    <h4 class="player-level">Level <%- data.player.level %></h4>
     <img src="<%- data.player.card.large %>" alt="<%- data.player.name %>'s Card">
     <hgroup>
-        <h2><%- data.player.name %></h2>
-        <h4><%- data.player.title %></h4>
-        <h4>Level <%- data.player.level %></h4>
+        <h2 class="player-name"><%- data.player.name %></h2>
+        <h4 class="player-title"><%- data.player.title %></h4>
+        <img src="<%- data.rankDetails.current.icon %>" alt="<%- data.player.name %>'s Rank" class="rank-icon">
     </hgroup>
 </aside>
+
+<div id="Match"></div>
 
 <%- contentFor("title") %>
 Valorant

@@ -15,6 +15,13 @@
     src: url("/styles/fonts/minecraft.woff2") format("woff2"), url("/styles/fonts/minecraft.ttf") format("truetype");;
 }
 
+@font-face {
+    font-family: "Lato-Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/styles/fonts/Lato-Regular.woff2") format("woff2"), url("/styles/fonts/Lato-Regular.ttf") format("truetype");;
+}
 
 /* Variables */
 :root {
