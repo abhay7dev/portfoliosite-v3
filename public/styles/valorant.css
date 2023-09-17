@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    font-family: "Lato-Regular", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #MainPlayer {
@@ -21,7 +23,6 @@
     bottom: 15rem;
     width: inherit;
     text-align: center;
-    font-family: "Lato-Regular" Arial sans-serif;
 }
 .main-player-name {
     background-color: rgb(249, 226, 175, 0.85);
@@ -53,6 +54,7 @@
     flex: 1;
     margin: 2rem 1rem 0 1rem;
     padding-bottom: 3rem;
+    background: radial-gradient(circle, rgba(0,0, 0, 0) 0%, rgba(17, 17, 27, 0.8) 100%), linear-gradient(0deg, rgba(17, 17, 27, 0.8) 100%, rgba(17, 17, 27, 0.8) 100%);;
 }
 
 #Match .teams {
@@ -68,20 +70,19 @@
     #Match .teams {
         flex-direction: column;
     }
-}
-/* 
-.agent-icon {
-    width: 5rem;
+    .map-bg {
+        display: none;
+    }
 }
 
-.player-card {
-    height: 5rem;
-} */
+.agent-icon {
+    padding: 0 0.3rem 0 0.3rem;
+}
 
 .comp-header {
     text-align: center;
     padding-bottom: 1rem;
-    font-size: 3rem
+    font-size: 3rem;
 }
 
 .player {
@@ -124,3 +125,26 @@
     text-align: center;
     font-size: 2rem;
 }
+
+.map-bg {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    transform: translate(-12%, -17.75%);
+    z-index: -1;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+    padding: 0.5rem;
+}
+
+.kill { color: #a6e3a1; }
+.death { color: #d20f39; }
+.assist { color: #f5e0dc; }

@@ -34,8 +34,7 @@ export default async (req, res) => {
         date: new Date(latestRankedGame.metadata.game_start * 1000).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }).split(", ")[0],
         players: {
             red: latestRankedGame.players.red.map((player) => { return { 
-                name: player.name, 
-                level: player.level, 
+                name: player.name,
                 card: player.assets.card.wide,
                 agent: {
                     name: player.character,
@@ -45,7 +44,6 @@ export default async (req, res) => {
             }}),
             blue: latestRankedGame.players.blue.map((player) => { return { 
                 name: player.name, 
-                level: player.level, 
                 card: player.assets.card.wide,
                 agent: {
                     name: player.character,
@@ -56,7 +54,6 @@ export default async (req, res) => {
         },
         redWins: latestRankedGame.teams.red.rounds_won,
         blueWins: latestRankedGame.teams.blue.rounds_won,
-        result: latestRankedGame.teams.red.rounds_won == latestRankedGame.teams.red.rounds_lost ? "draw" : ( latestRankedGame.teams.red.has_won ? "red" : "blue"),
     };
 
     return res.render("valorant");

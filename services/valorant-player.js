@@ -46,9 +46,10 @@ export default class ValorantPlayer {
 export const mapData = async (mapName) => {
     const maps = (await (await fetch("https://valorant-api.com/v1/maps")).json()).data;
     const map = maps.filter(mp => mp.displayName == mapName);
+    
     return {
         name: mapName,
-        splash: map.splash,
+        splash: map[0].splash,
     }
 }
 

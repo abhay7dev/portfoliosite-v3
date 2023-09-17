@@ -10,32 +10,15 @@
     </hgroup>
 </aside>
 
-
 <article id="Match">
+    <img src="<%- data.latestGame.map.splash %>" alt="<%- data.latestGame.map.name %> Splash" class="map-bg">
     <h2 class="comp-header">Competitive on <i><%= data.latestGame.map.name %></i> - (<%= data.latestGame.date %>)</h2>
     <div class="teams">
         <section class="team red">
             <h3 class="rounds-won">Rounds Won: <%= data.latestGame.redWins %></h3>
             <% data.latestGame.players.red.forEach((player) => { %>
                 <div class="player">
-                    <img src="<%- player.agent.card %>" alt="Player Agent Image" class="agent-icon">
-                    <div class="player-info">
-                        <img src="<%- player.card %>" alt="Player Card" class="player-card">
-                        <h4 class="agent-name">
-                            <%= player.agent.name %>
-                            <% if(data.player.name == player.name) { %>
-                                (<span class="main-player-name"><%= data.player.name %></span>)
-                            <% } %>
-                        </h4>
-                    </div>
-                </div>
-            <% }); %>
-        </section>
-        <section class="team blue">
-            <h3 class="rounds-won">Rounds Won: <%= data.latestGame.blueWins %></h3>
-            <% data.latestGame.players.blue.forEach((player) => { %>
-                <div class="player">
-                    <img src="<%- player.agent.card %>" alt="Player Agent Image" class="agent-icon">
+                    <img src="<%- player.agent.card %>" alt="<%- player.agent.name %> Image" class="agent-icon">
                     <div class="player-info">
                         <img src="<%- player.card %>" alt="Player Card" class="player-card">
                         <h4 class="agent-name">
@@ -44,6 +27,33 @@
                                 (<span class="main-player-name-card"><%= data.player.name %></span>)
                             <% } %>
                         </h4>
+                    </div>
+                    <div class="stats">
+                        <p>Kills: <span class="kill"><%- player.stats.kills %></span></p>
+                        <p>Deaths: <span class="death"><%- player.stats.deaths %></span></p>
+                        <p>Assists: <span class="assist"><%- player.stats.assists %></span></p> 
+                    </div>
+                </div>
+            <% }); %>
+        </section>
+        <section class="team blue">
+            <h3 class="rounds-won">Rounds Won: <%= data.latestGame.blueWins %></h3>
+            <% data.latestGame.players.blue.forEach((player) => { %>
+                <div class="player">
+                    <img src="<%- player.agent.card %>" alt="<%- player.agent.name %> Image" class="agent-icon">
+                    <div class="player-info">
+                        <img src="<%- player.card %>" alt="Player Card" class="player-card">
+                        <h4 class="agent-name">
+                            <%= player.agent.name %>
+                            <% if(data.player.name == player.name) { %>
+                                (<span class="main-player-name-card"><%= data.player.name %></span>)
+                            <% } %>
+                        </h4>
+                    </div>
+                    <div class="stats">
+                        <p>Kills: <span class="kill"><%- player.stats.kills %></span></p>
+                        <p>Deaths: <span class="death"><%- player.stats.deaths %></span></p>
+                        <p>Assists: <span class="assist"><%- player.stats.assists %></span></p> 
                     </div>
                 </div>
             <% }); %>
