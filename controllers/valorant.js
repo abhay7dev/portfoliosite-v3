@@ -31,12 +31,16 @@ export default async (req, res) => {
     res.data.player.title = await titleData(latestRankedGame.players.all_players.filter(p => p.puuid == player.puuid)[0].player_title);
     res.data.latestGame = {
         map,
+        date: new Date(latestRankedGame.metadata.game_start * 1000).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }).split(", ")[0],
         players: {
             red: latestRankedGame.players.red.map((player) => { return { 
                 name: player.name, 
                 level: player.level, 
-                card: player.assets.wide,
-                agent: player.character,
+                card: player.assets.card.wide,
+                agent: {
+                    name: player.character,
+                    card: player.assets.agent.small,
+                },
                 stats: { kills: player.stats.kills, deaths: player.stats.deaths, assists: player.stats.assists },  
             }}),
             blue: latestRankedGame.players.blue.map((player) => { return { 
@@ -45,11 +49,13 @@ export default async (req, res) => {
                 card: player.assets.card.wide,
                 agent: {
                     name: player.character,
-                    card: player.assets.card.wide,
+                    card: player.assets.agent.small,
                 },
                 stats: { kills: player.stats.kills, deaths: player.stats.deaths, assists: player.stats.assists },  
             }}),
         },
+        redWins: latestRankedGame.teams.red.rounds_won,
+        blueWins: latestRankedGame.teams.blue.rounds_won,
         result: latestRankedGame.teams.red.rounds_won == latestRankedGame.teams.red.rounds_lost ? "draw" : ( latestRankedGame.teams.red.has_won ? "red" : "blue"),
     };
 
