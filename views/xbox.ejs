@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="/styles/xbox.css">
+<script type="module" src="/scripts/xbox.js"></script>
+
+<% data.clips.forEach((clip) => { %>
+    <video controls preload="none" height="720" width="1280" data-poster="<%- clip.thumb %>" src="<%- clip.url %>"></video>
+<% }); %>
 
 <%- contentFor("title") %>
 Abhay's Xbox Clips

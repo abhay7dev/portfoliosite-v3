@@ -1,0 +1,12 @@
+#content {
+    padding: 5rem 0 10rem 0;
+}
+
+#content > video {
+    margin-bottom: 1rem;
+    width: 80%;
+    max-width: 1280px;
+}
+#content > video:last-child {
+    margin-bottom: 0;
+}
