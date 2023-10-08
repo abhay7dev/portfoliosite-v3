@@ -6,6 +6,7 @@ router.use(layouts);
 
 import minecraft from "../controllers/minecraft.js";
 import valorant from "../controllers/valorant.js";
+import xbox from "../controllers/xbox.js";
 import projects from "../controllers/projects.js"
 
 import ejsData from "../middleware/data.js";
@@ -21,6 +22,7 @@ router.get("/contact", (_, res) => res.render("contact"));
 
 router.get("/minecraft", minecraft);
 router.get("/valorant", await valorant);
+router.get("/xbox", await xbox);
 
 // TODO: Implement Error Handling
 

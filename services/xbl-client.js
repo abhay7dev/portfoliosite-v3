@@ -1,6 +1,8 @@
 import { authenticate } from '@xboxreplay/xboxlive-auth';
 import XboxLiveAPI from "@xboxreplay/xboxlive-api";
 
+import { scheduleJob } from "node-schedule";
+
 export default class XboxLiveClient {
     constructor(email, password) {
         this.email = email;
@@ -14,6 +16,11 @@ export default class XboxLiveClient {
             userHash: info.user_hash,
             XSTSToken: info.xsts_token
         };
+        
+        const updateAuthJob = scheduleJob(new Date(info.expires_on), async () => {
+            return await this.init();
+        });
+
         this.init = true;
         return this;
     }
@@ -31,7 +38,7 @@ export default class XboxLiveClient {
     }
 
     #initCheck() {
-        if(!this.init) throw new Error("Valorant Character Object not Initialized. Did you remember to run '.init()'?.");
+        if(!this.init) throw new Error("Xbox Live Client not Initialized. Did you remember to run '.init()'?.");
     }
 
 };
