@@ -148,3 +148,15 @@
 .kill { color: #a6e3a1; }
 .death { color: #d20f39; }
 .assist { color: #f5e0dc; }
+
+.trn-logo {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    transition: all 0.5s ease-out; 
+}
+
+.trn-logo:hover {
+    border-bottom: 1px solid var(--rosewater);
+}
