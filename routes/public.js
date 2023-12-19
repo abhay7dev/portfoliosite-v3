@@ -5,7 +5,6 @@ import { root } from "../config.js";
 import { join as pathJoin } from "path";
 
 import minify from "express-minify";
-
 router.use(minify());
 
 router.use((req, res, next) => {

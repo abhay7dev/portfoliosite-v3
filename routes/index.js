@@ -7,9 +7,4 @@ import PublicRouter from "./public.js";
 router.use(PublicRouter);
 router.use(ClientRouter);
 
-router.use((_, res) => {
-    res.data.error = 404;
-    res.status(404).render("error");
-});
-
 export default router;

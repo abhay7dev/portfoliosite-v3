@@ -1,3 +1,5 @@
+export const url = process.env.SITE_URL || "https://abhay7.dev";
+
 const { env } = process;
 
 // Essentials

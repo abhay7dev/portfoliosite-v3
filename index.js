@@ -1,4 +1,4 @@
-import { PORT, NODE_ENV, SERVER_TIME_ZONE} from "./config.js";
+import { PORT, NODE_ENV, SERVER_TIME_ZONE, url } from "./config.js";
 
 import express from "express";
 const app = express();
@@ -13,6 +13,11 @@ app.set("x-powered-by", false);
 
 import router from "./routes/index.js";
 app.use(router);
+
+router.use((_, res) => {
+    res.data.error = 404;
+    res.status(404).render("error");
+});
 
 app.listen(PORT, () => {
     console.log(
