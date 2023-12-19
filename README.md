@@ -3,8 +3,6 @@ My Third Portfolio Site
 
 ## TODO
 
-* Improve Security
-    * CSP
 * Meta Stuff (images, desc)
 * SEO Stuff
 * All subpages (sitemap.xml too)

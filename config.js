@@ -27,3 +27,21 @@ export const GITHUB = {
     USERNAME: env.GITHUB_USERNAME || "EpicGamer007",
     TOKEN: env.GITHUB_TOKEN || "",
 }
+
+export const csp = `upgrade-insecure-requests;
+                    default-src 'none';
+                    child-src 'none';
+                    frame-src 'none';
+                    frame-ancestors 'none';
+                    media-src 'self' *.xboxlive.com;
+                    base-uri 'none';
+                    object-src 'none';
+                    manifest-src 'self';
+                    img-src 'self' *.xboxlive.com https://avatars.githubusercontent.com https://textures.minecraft.net https://media.valorant-api.com;
+                    connect-src 'self';
+                    font-src 'self';
+                    style-src 'self';
+                    script-src 'self';
+                    worker-src 'self';
+                    form-action 'none';
+                    `.replace(/\s/g, " ");
