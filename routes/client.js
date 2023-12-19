@@ -62,6 +62,4 @@ router.get("/minecraft", minecraft);
 router.get("/valorant", await valorant);
 router.get("/xbox", await xbox);
 
-// TODO: Implement Error Handling
-
 export default router;

@@ -1,18 +1,17 @@
 <link rel="stylesheet" href="/styles/grids.css">
 <link rel="stylesheet" href="/styles/projects.css">
 
-<!-- TODO: Show headers. Make accesible by allowing accesibility clicks -->
-<!-- TODO: TF am I doing with the GitHub Icon. I need to update this and make it better -->
+<script type="module" src="/scripts/projects.js"></script>
 
 <% data.projects.forEach((proj) => { %>
-    <section class="card" tabindex="0" aria-label="Project Card">
+    <section class="card" tabindex="0" aria-label="Project Card" role="link">
         <img src="/images/github.svg" alt="Github Icon"/>
         <div class="card-content">
-            <p class="card-title"><a tabindex="1" target="_blank" href="<%- proj.url %>"><%= proj.name %></a></p>
+            <p class="card-title"><a tabindex="-1" target="_blank" href="<%- proj.url %>"><%= proj.name %></a></p>
             <p class="card-description"><%= proj.desc %><p>
             <p class="stats"><span class="stars"><%= proj.stars %> star<% if(proj.stars != 1) { %>s<% } %></span><span class="lang"><%= proj.lang %></span></p>
-          </div>
-      </section>
+        </div>
+    </section>
 <% }); %>
 
 <%- contentFor("title") %>
