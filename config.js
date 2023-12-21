@@ -1,6 +1,8 @@
-export const url = process.env.SITE_URL || "https://abhay7.dev";
-
 const { env } = process;
+
+// General
+export const url = env.SITE_URL || "https://abhay7.dev";
+export const year = new Date().getFullYear();
 
 // Essentials
 export const root = new URL("./", import.meta.url).pathname;
