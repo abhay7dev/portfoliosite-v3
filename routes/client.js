@@ -6,7 +6,7 @@ router.use(layouts);
 
 import minecraft from "../controllers/minecraft.js";
 import valorant from "../controllers/valorant.js";
-import xbox from "../controllers/xbox.js";
+//import xbox from "../controllers/xbox.js";
 import projects from "../controllers/projects.js"
 
 import { csp } from "../config.js"
@@ -60,6 +60,6 @@ router.get("/contact", (_, res) => res.render("contact"));
 
 router.get("/minecraft", minecraft);
 router.get("/valorant", await valorant);
-router.get("/xbox", await xbox);
+//router.get("/xbox", await xbox);
 
 export default router;
