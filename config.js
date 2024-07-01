@@ -45,7 +45,7 @@ export const csp = `upgrade-insecure-requests;
                     connect-src 'self';
                     font-src 'self';
                     style-src 'self';
-                    script-src 'self';
+                    script-src 'self' https://analytics.abhay7.dev;
                     worker-src 'self';
                     form-action 'none';
                     `.replace(/\s/g, " ");
