@@ -1,7 +1,7 @@
 const { env } = process;
 
 // General
-export const url = env.SITE_URL || "https://abhay7.dev";
+export const url = env.SITE_URL || "https://me.abhay7.dev";
 export const year = new Date().getFullYear();
 
 // Essentials
